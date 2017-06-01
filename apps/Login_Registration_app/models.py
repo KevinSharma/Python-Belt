@@ -39,11 +39,11 @@ class UserManager(models.Manager):
             return [False, errors]
 
 class User(models.Model):
-    first_name = models.Charfield(max_length = 40)
-    last_name = models.Charfield(max_length = 40)
-    email = models.Charfield(max_length = 255)
-    password = models.Charfield(max_length = 40)
-    conf_pwd = models.Charfield(max_length = 40)
+    first_name = models.CharField(max_length = 40)
+    last_name = models.CharField(max_length = 40)
+    email = models.CharField(max_length = 255)
+    password = models.CharField(max_length = 40)
+    conf_pwd = models.CharField(max_length = 40)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
     objects = UserManager()

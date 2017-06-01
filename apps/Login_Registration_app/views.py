@@ -1,6 +1,5 @@
-from django.shortcuts import render, redirect
-
 from __future__ import unicode_literals
+from django.shortcuts import render, redirect
 
 from .models import User
 # Create your views here.
@@ -28,15 +27,15 @@ def register(request):
 
 # user_array = [False, [first_name is too short, 'password is too short']]
     if user_array[0] == False:
+        print user
         for error_message in user_array[1]:
             messages.error(request, error_message)
         return redirect('/')
 # redirect to back to registration page.
 
-    print user
 # redirect back to success page.
     else:
         return redirect('/')
 
 def login(request):
-    
+    pass
